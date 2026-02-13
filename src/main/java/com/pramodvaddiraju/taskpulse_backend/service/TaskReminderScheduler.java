@@ -11,16 +11,16 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Component
-public class TaskScheduler {
+public class TaskReminderScheduler {
 
     private static final Logger log =
-            LoggerFactory.getLogger(TaskScheduler.class);
+            LoggerFactory.getLogger(TaskReminderScheduler.class);
 
     private final TaskRepository taskRepository;
     private final EmailService emailService;
 
-    public TaskScheduler(TaskRepository taskRepository,
-                         EmailService emailService) {
+    public TaskReminderScheduler(TaskRepository taskRepository,
+                                 EmailService emailService) {
         this.taskRepository = taskRepository;
         this.emailService = emailService;
     }
